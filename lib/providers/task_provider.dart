@@ -21,7 +21,8 @@ class TasksProvider with ChangeNotifier {
       createdAt: DateTime.now(),
       updatedAt: DateTime.now(),
       priority: Priority.medium,
-    ), Task(
+    ),
+    Task(
       id: "fff",
       title: "Eat some food",
       description: "I will eat some damn food",
@@ -34,5 +35,12 @@ class TasksProvider with ChangeNotifier {
 
   List<Task> get items {
     return [..._items];
+  }
+
+  void addTask(Task task) {
+    task.createdAt = DateTime.now();
+    task.updatedAt = DateTime.now();
+    _items.add(task);
+    notifyListeners();
   }
 }

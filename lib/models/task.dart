@@ -3,13 +3,13 @@ import 'package:flutter/foundation.dart';
 enum Priority { high, medium, low }
 
 class Task {
-  final String id;
-  final String title;
-  final String description;
-  final Priority priority;
-  final String image;
-  final DateTime createdAt;
-  final DateTime updatedAt;
+  String id;
+  String title;
+  String description;
+  Priority priority;
+  String image;
+  DateTime createdAt;
+  DateTime updatedAt;
   bool done;
 
   Task({
